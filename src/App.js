@@ -9,21 +9,16 @@ class App extends Component {
     const {counter} = this.props;
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React + MobX</h2>
-        </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          hey hello forever.
+          Did you practice coding today?
         </p>
         <p>
-          Counter:
+        <button onClick={() => counter.increment()}> Yes </button>
+        <button onClick={() => counter.decrement()}> - </button>
+        </p>
+        <p>
+          Days you've done it:
           <span className={counter.isOdd ? 'Counter-odd' : 'Counter-even'}> {counter.count} </span>
-        </p>
-        <p>
-          <button onClick={() => counter.increment()}> + </button>
-          <button onClick={() => counter.decrement()}> - </button>
         </p>
         <DevTools />
       </div>
