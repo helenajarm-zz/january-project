@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const {counter} = this.props;
+    const counter = this.props.counter;
     return (
       <div className="App">
         <p className="App-intro">
@@ -14,11 +14,12 @@ class App extends Component {
         </p>
         <p>
         <button onClick={() => counter.increment()}> Yes </button>
-        <button onClick={() => counter.decrement()}> - </button>
+        <button onClick={() => counter.decrement()}> nvm </button>
         </p>
         <p>
-          Days you've done it:
-          <span className={counter.isOdd ? 'Counter-odd' : 'Counter-even'}> {counter.count} </span>
+          You've coded for
+          <span> {counter.count} </span>
+          days this year.
         </p>
         <DevTools />
       </div>

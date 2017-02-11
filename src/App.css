@@ -28,11 +28,3 @@ body{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-.Counter-even {
-    color: orange;
-}
-
-.Counter-odd {
-    color: cornflowerblue;
-}

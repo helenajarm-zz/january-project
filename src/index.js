@@ -4,7 +4,10 @@ import Counter from './Counter';
 import App from './App';
 import './index.css';
 
+
+const c = window.counter = new Counter()
+
 ReactDOM.render(
-  <App counter={new Counter()} />,
+  <App counter={c} />,
   document.getElementById('root')
 );
