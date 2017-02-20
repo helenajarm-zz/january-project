@@ -6,23 +6,24 @@ import './App.css';
 
 class App extends Component {
   render() {
+
+    var moment = require('moment');
+    /*var now = moment().format();*/
     const counter = this.props.counter;
+
     return (
-      <div className="App">
-        <p className="App-intro">
-          Did you practice coding today?
-        </p>
-        <p>
-        <button onClick={() => counter.increment()}> Yes </button>
-        <button onClick={() => counter.decrement()}> nvm </button>
-        </p>
-        <p>
-          You've coded for
-          <span> {counter.count} </span>
-          days this year.
-        </p>
-        <DevTools />
-      </div>
+        <div className="App">
+          <div className="App-content">
+            <button onClick={() => counter.increment()}>+</button>
+            <p className="headline">
+              <span className="number" style={{color: counter.color}}>{counter.count}</span> days of coding
+            </p>
+            <p>
+              Last acomplished {counter.date}
+            </p>
+            <button onClick={() => counter.decrement()}> - </button>
+          </div>
+        </div>
     );
   }
 }
