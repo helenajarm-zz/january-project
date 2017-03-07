@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
-import { observer } from 'mobx-react'
-import DevTools from 'mobx-react-devtools';
-import logo from './logo.svg';
+import React, { Component} from 'react';
+import { observer } from 'mobx-react';
 import './App.css';
+import Editgoal from './Editgoal';
+import Goal from './Goal';
 
 class App extends Component {
   render() {
 
-    var moment = require('moment');
-    /*var now = moment().format();*/
-    const counter = this.props.counter;
+    const store = this.props.store;
 
     return (
         <div className="App">
+
+          <Editgoal store={store}/>
+          
+
           <div className="App-content">
-            <button onClick={() => counter.increment()}>+</button>
+            <button onClick={() => store.increment()}>+</button>
             <p className="headline">
-              <span className="number" style={{color: counter.color}}>{counter.count}</span> days of coding
+              <span className="number" style={{color: store.color}}>{store.count}</span> days of <Goal goal={store.goal} />
             </p>
             <p>
-              Last acomplished {counter.date}
+              Last acomplished {store.date}
             </p>
-            <button onClick={() => counter.decrement()}> - </button>
+            <button onClick={() => store.decrement()}> - </button>
           </div>
         </div>
+
     );
   }
 }

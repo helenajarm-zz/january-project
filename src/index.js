@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
+import Store from './Store';
 import App from './App';
 import './index.css';
 
 
-const c = window.counter = new Counter()
+const s = window.store = new Store()
 
 ReactDOM.render(
-  <App counter={c} />,
+  <App store={s}/>,
   document.getElementById('root')
 );
