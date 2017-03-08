@@ -1,7 +1,7 @@
 import { extendObservable} from 'mobx';
     var moment = require('moment');
 
-class Store {
+class Counter {
   constructor() {
     extendObservable(this, {
       count: 0,
@@ -31,22 +31,15 @@ class Store {
   }
 
   addDate(){
+          console.log('hello');
     localStorage.date = moment().toISOString();
   }
 
   load(){
     this.count = Number(localStorage.count) || 0;
 
-
-    if(localStorage.goal === undefined){
-      this.goal = "set your goal";
-    }
-    else{
-      this.goal  = localStorage.goal;
-    }
-
-    if(localStorage.date === undefined){
-      this.date = ": in your dreams";
+    if(localStorage.date == "undefined"){
+      this.date = ": in your dreams"
     }
     else {
       this.date = moment(localStorage.date).fromNow()
@@ -55,4 +48,4 @@ class Store {
 
 }
 
-export default Store;
+export default Counter;

@@ -1,30 +1,76 @@
 body{
-    background-color: #eaf4f5;
-}
+  background-color: #4c38bb;
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400 !important;
+  }
 
 .App {
-  margin-top: 20%;
+  margin-top: 3%;
+  border-radius: 600px;
+  height: 600px;
   text-align: center;
+  position: relative;
+  margin: auto;
+}
+.App-content {
+  padding-top: 10%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: 36px;
+.number{
+  font-size: 120px;
+  display: block;
+  padding-bottom: px;
+  border-bottom: 10px solid;
+  margin-bottom: 20px !important;
+  width: 120px;
+  margin: auto;
   font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.headline{
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+p{
+-webkit-margin-before: 0em;
+}
+
+button{
+ background-color: #7391f1;
+  color: white;
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  border: none;
+  padding: 12px;
+  border-radius: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  font-size: 16px;
+  margin: 40px 0px;
+}
+
+button:hover{
+  background-color: #83fddd;
+  cursor: pointer;
+}
+
+input{
+  background-color: transparent;
+  border: 0px solid;
+  font-size: 32px;
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+}
+
+
+input:hover{
+  text-decoration: underline;
+}
+
+input:focus{
+  border: 1px solid blue;
 }

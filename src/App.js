@@ -12,17 +12,16 @@ class App extends Component {
     return (
         <div className="App">
 
-          <Editgoal store={store}/>
-          
 
           <div className="App-content">
             <button onClick={() => store.increment()}>+</button>
-            <p className="headline">
-              <span className="number" style={{color: store.color}}>{store.count}</span> days of <Goal goal={store.goal} />
-            </p>
-            <p>
+              <span className="number" style={{color: store.color}}>{store.count}</span>
+              <div className="headline">
+                days of <Editgoal store={store}/>
+              </div>
+            <div>
               Last acomplished {store.date}
-            </p>
+            </div>
             <button onClick={() => store.decrement()}> - </button>
           </div>
         </div>
