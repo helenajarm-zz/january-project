@@ -6,15 +6,16 @@ body{
   }
 
 .App {
-  margin-top: 3%;
+  margin-top: 10px;
   border-radius: 600px;
-  height: 600px;
+  height: 100vh;
   text-align: center;
-  position: relative;
   margin: auto;
 }
 .App-content {
-  padding-top: 10%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .number{
@@ -53,24 +54,61 @@ button{
 }
 
 button:hover{
-  background-color: #83fddd;
+  background-color: #65f1cc;
   cursor: pointer;
 }
 
 input{
-  background-color: transparent;
-  border: 0px solid;
-  font-size: 32px;
-  color: white;
+  background-color: TRANSPARENT;
+  font-size: 24px;
+  color: #313033;
   font-family: 'Inconsolata', monospace;
   font-weight: bold;
-}
-
-
-input:hover{
-  text-decoration: underline;
+  border: 0px transparent;
+  border-bottom: 1px solid #cdc2ff;
+  width: 284px;
+  padding: 8px;
 }
 
 input:focus{
-  border: 1px solid blue;
+    outline: none;
+    border-bottom: 1px dashed #45e2b9;
+}
+
+.editModal{
+  background-color: white;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+}
+
+.modalContent{
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  color: #313033;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modalContent p{
+      margin-bottom: 32px;
+}
+
+.modalContent h3{
+  margin-bottom:8px;
+}
+
+.saveButton{
+  width: 300px;
+  background-color: #4c38bb;
+  border-radius: 4px;
+  margin: 20px 0px;
+}
+
+.editButton{
+  position: absolute;
+  right: 20px;
 }

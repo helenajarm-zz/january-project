@@ -12,12 +12,14 @@ class App extends Component {
     return (
         <div className="App">
 
+          {store.modalVisible && <Editgoal store={store}/> }
+          <button className="editButton" onClick={() => store.toggleModal()}>edit</button>
 
           <div className="App-content">
             <button onClick={() => store.increment()}>+</button>
               <span className="number" style={{color: store.color}}>{store.count}</span>
               <div className="headline">
-                days of <Editgoal store={store}/>
+                days of {store.goal}
               </div>
             <div>
               Last acomplished {store.date}

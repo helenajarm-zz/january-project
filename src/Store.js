@@ -8,8 +8,16 @@ class Store {
       date: 0,
       color: "white",
       goal: "coding",
+      modalVisible: false,
     });
     this.load();
+  }
+
+
+  toggleModal = (event) => {
+    console.log("hi");
+    this.modalVisible = !this.modalVisible;
+
   }
 
 
@@ -39,7 +47,8 @@ class Store {
 
 
     if(localStorage.goal === undefined){
-      this.goal = "set your goal";
+      this.goal = "ie. reading";
+      this.modalVisible = true;
     }
     else{
       this.goal  = localStorage.goal;
