@@ -1,1 +1,3 @@
-Hello! Changing things in here to see how this flows.
+A simple habit tracker made with React. 
+
+Final output here: http://habits.surge.sh/
